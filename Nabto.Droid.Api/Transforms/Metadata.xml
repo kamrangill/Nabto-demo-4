@@ -1,0 +1,530 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+  <!-- Normalize the namespace for .NET -->
+  <attr path="/api/package[@name='com.nabto.api']"
+      name="managedName">Nabto.Android.Api</attr>
+  
+  
+  <attr path="/api/package[@name='com.nabto.api']/interface[@name='NabtoAssetManager']" name="visibility">public</attr>
+  <!-- Change a parameter name from the generic p0 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/constructor[@name='NabtoApi']/parameter[@name='p0']"
+         name="name">AssetManager</attr>
+  
+  
+  <!-- Change a parameter name from the generic p0 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='closeSession']/parameter[@name='p0']"
+         name="name">Session</attr>
+
+  <!-- Change a parameter name from the generic p0 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='createProfile']/parameter[@name='p0']"
+         name="name">Email</attr>
+
+  <!-- Change a parameter name from the generic p1 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='createProfile']/parameter[@name='p1']"
+         name="name">Password</attr>
+
+
+  <!-- Change a parameter name from the generic p1 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='createSelfSignedProfile']/parameter[@name='p0']"
+         name="name">CommonName</attr>
+
+  <!-- Change a parameter name from the generic p1 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='createSelfSignedProfile']/parameter[@name='p1']"
+         name="name">Password</attr>
+  
+  <!--fetchUrl Meta Transformation-->
+  <!--fetchUrl(java.lang.String nabtoUrl, Session session)-->
+  <!-- Change a parameter name from the generic p1 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='fetchUrl']/parameter[@name='p0']"
+         name="name">NabtoUrl</attr>
+
+  <!-- Change a parameter name from the generic p1 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='fetchUrl']/parameter[@name='p1']"
+         name="name">Session</attr>
+  
+  <!--getFingerprint(java.lang.String certId, java.lang.String[] fingerprint)
+  Retrieve public key fingerprint for certificate with specified id.-->
+
+  <!-- Change a parameter name from the generic p1 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='getFingerprint']/parameter[@name='p0']"
+         name="name">CertId</attr>
+  
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='getFingerprint']/parameter[@name='p1']"
+        name="name">FingerPrint</attr>
+
+
+  <!--getSessionToken(Session session)
+  Reads the session token of the specified session handle.-->
+
+  <!-- Change a parameter name from the generic p0 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='getSessionToken']/parameter[@name='p0']"
+         name="name">Session</attr>
+
+  <!--openSession(java.lang.String id, java.lang.String password)
+  Starts a new Nabto data retrieval session using the specified profile.-->
+  
+  <!-- Change a parameter name from the generic p0 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='openSession']/parameter[@name='p0']"
+         name="name">Id</attr>
+
+  <!-- Change a parameter name from the generic p1 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='openSession']/parameter[@name='p1']"
+         name="name">Password</attr>
+  
+  <!--probeNetwork(int timeoutMillis, java.lang.String hostname)
+  Try to connect to probe service to test for network connectivity.-->
+
+  <!-- Change a parameter name from the generic p0 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='probeNetwork']/parameter[@name='p0']"
+         name="name">TimeoutMillis</attr>
+
+
+  <!-- Change a parameter name from the generic p1 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='probeNetwork']/parameter[@name='p1']"
+         name="name">HostName</attr>
+
+  <!--resetAccountPassword(java.lang.String email)
+  Requests reset of account password on the portal (host name defined in the configuration file).-->
+
+  <!-- Change a parameter name from the generic p0 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='resetAccountPassword']/parameter[@name='p0']"
+         name="name">Email</attr>
+  
+  <!--rpcInvoke(java.lang.String nabtoUrl, Session session)
+  Retrieves data synchronously from specified nabto://URL on specified session.-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='rpcInvoke']/parameter[@name='p0']"
+       name="name">URL</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='rpcInvoke']/parameter[@name='p1']"
+      name="name">Session</attr>
+  <!--rpcSetDefaultInterface(java.lang.String interfaceDefinition, Session session)
+  Sets the default RPC interface to use when later invoking rpcInvoke(String, Session)-->.
+  
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='rpcSetDefaultInterface']/parameter[@name='p0']"
+   name="name">InterfaceDefinition</attr>
+  
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='rpcSetDefaultInterface']/parameter[@name='p1']"
+     name="name">Session</attr>
+
+  <!--rpcSetInterface(java.lang.String nabtoHost, java.lang.String interfaceDefinition, Session session)
+  Sets the RPC interface to use for a specific host when later invoking rpcInvoke(String, Session).-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='rpcSetInterface']/parameter[@name='p0']"
+ name="name">InterfaceDefinition</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='rpcSetInterface']/parameter[@name='p1']"
+     name="name">Session</attr>
+
+  <!--setOption(java.lang.String name, java.lang.String value)
+  Set API option.-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='setOption']/parameter[@name='p0']"
+name="name">Name</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='setOption']/parameter[@name='p1']"
+     name="name">Value</attr>
+
+  <!--signup(java.lang.String email, java.lang.String password)
+  Signs up for a Nabto account on the portal (host name defined in the configuration file).-->
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='signup']/parameter[@name='p0']"
+name="name">Email</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='signup']/parameter[@name='p1']"
+name="name">Password</attr>
+
+
+  <!--streamClose(Stream stream)
+  Closes an open stream.-->
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='streamClose']/parameter[@name='p0']"
+name="name">Stream</attr>
+  <!--streamConnectionType(Stream stream)
+  Retrieve the Nabto connection type of the underlying connection for the given stream.-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='streamConnectionType']/parameter[@name='p0']"
+name="name">Stream</attr>
+
+
+  <!--streamOpen(java.lang.String nabtoHost, Session session)
+  Opens a stream on an existing session to a Nabto enabled device.-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='streamOpen']/parameter[@name='p0']"
+name="name">NabtoHost</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='streamOpen']/parameter[@name='p1']"
+name="name">Session</attr>
+
+
+  <!--streamRead(Stream stream)
+  Reads some data from an open stream.-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='streamRead']/parameter[@name='p0']"
+  name="name">Stream</attr>
+
+  <!--streamSetOption(Stream stream, NabtoStreamOption option, int value)
+  Set stream options (see streamRead(Stream) and streamWrite(Stream, byte[]) for possible options).-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='streamSetOption']/parameter[@name='p0']"
+  name="name">Stream</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='streamSetOption']/parameter[@name='p1']"
+name="name">Option</attr>
+
+<attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='streamSetOption']/parameter[@name='p2']"
+name="name">Value</attr>
+
+  <!--streamWrite(Stream stream, byte[] data)
+  Writes given data to a stream.-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='streamWrite']/parameter[@name='p0']"
+name="name">Stream</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='streamWrite']/parameter[@name='p1']"
+name="name">Data</attr>
+
+  <!--submitPostData(java.lang.String nabtoUrl, byte[] postData, java.lang.String postMimeType, Session session)
+  Submits specified data synchronously to specified URL through specified session.-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='submitPostData']/parameter[@name='p0']"
+name="name">NabtoUrl</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='submitPostData']/parameter[@name='p1']"
+name="name">PostData</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='submitPostData']/parameter[@name='p2']"
+name="name">PostMimeType</attr>
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='submitPostData']/parameter[@name='p3']"
+name="name">Session</attr>
+
+  <!--tunnelClose(Tunnel tunnel)
+  Closes an open tunnel.-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='tunnelClose']/parameter[@name='p0']"
+  name="name">Tunnel</attr>
+
+  <!--tunnelInfo(Tunnel tunnel)
+  Retrieves information on an (open) tunnel.-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='tunnelInfo']/parameter[@name='p0']"
+name="name">Tunnel</attr>
+
+
+  <!--tunnelOpenTcp(int localPort, java.lang.String nabtoHost, java.lang.String remoteHost, int remotePort, Session session)
+  Opens a TCP tunnel to a remote server through a Nabto enabled device.-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='tunnelOpenTcp']/parameter[@name='p0']"
+name="name">LocalPort</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='tunnelOpenTcp']/parameter[@name='p1']"
+name="name">NabtoHost</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='tunnelOpenTcp']/parameter[@name='p2']"
+name="name">RemoteHost</attr>
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='tunnelOpenTcp']/parameter[@name='p3']"
+name="name">RemotePort</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoApi']/method[@name='tunnelOpenTcp']/parameter[@name='p4']"
+name="name">Session</attr>
+
+ 
+  
+  <!--NabtoAndroidAssetManager-->
+  
+  
+  
+  <!-- Change a parameter name from the generic p0 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoAndroidAssetManager']/constructor[@name='NabtoAndroidAssetManager']/parameter[@name='p0']"
+           name="name">Context</attr>
+
+  <!--public class NabtoCApiWrapper-->
+  
+  <!--nabtoCloseSession(Session session)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoCloseSession']/parameter[@name='p0']"
+name="name">Session</attr>
+
+  <!--static NabtoStatus	nabtoCreateProfile(java.lang.String email, java.lang.String password)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoCreateProfile']/parameter[@name='p0']"
+name="name">Email</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoCreateProfile']/parameter[@name='p1']"
+name="name">Password</attr>
+  
+ <!--static NabtoStatus	nabtoCreateSelfSignedProfile(java.lang.String commonName, java.lang.String password)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoCreateSelfSignedProfile']/parameter[@name='p0']"
+name="name">CommonName</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoCreateSelfSignedProfile']/parameter[@name='p1']"
+name="name">Password</attr>
+  
+ 
+ <!--static UrlResult	nabtoFetchUrl(java.lang.String url, Session session)-->
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoFetchUrl']/parameter[@name='p0']"
+name="name">url</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoFetchUrl']/parameter[@name='p1']"
+name="name">Session</attr>
+
+  <!--static NabtoStatus	nabtoGetFingerprint(java.lang.String certId, byte[] fingerprint)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoGetFingerprint']/parameter[@name='p0']"
+name="name">CertId</attr>
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoGetFingerprint']/parameter[@name='p1']"
+name="name">FingerPrint</attr>
+
+  <!--static java.lang.String	nabtoGetSessionToken(Session session)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoGetSessionToken']/parameter[@name='p0']"
+name="name">Session</attr>
+
+  <!--static Session	nabtoOpenSession(java.lang.String id, java.lang.String password)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoOpenSession']/parameter[@name='p0']"
+  name="name">Id</attr>
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoOpenSession']/parameter[@name='p1']"
+name="name">Password</attr>
+
+  <!--static NabtoStatus	nabtoProbeNetwork(int timeoutMillis, java.lang.String hostname)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoProbeNetwork']/parameter[@name='p0']"
+  name="name">TimeoutMillis</attr>
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoProbeNetwork']/parameter[@name='p1']"
+name="name">HostName</attr>
+
+
+  <!--static NabtoStatus	nabtoResetAccountPassword(java.lang.String email)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoResetAccountPassword']/parameter[@name='p0']"
+name="name">Email</attr>
+
+
+  
+  <!--static RpcResult	nabtoRpcInvoke(java.lang.String nabtoUrl, Session session)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoRpcInvoke']/parameter[@name='p0']"
+ name="name">NabtoUrl</attr>
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoRpcInvoke']/parameter[@name='p1']"
+name="name">Session</attr>
+
+  <!--static RpcResult	nabtoRpcSetDefaultInterface(java.lang.String interfaceDefinition, Session session)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoRpcSetDefaultInterface']/parameter[@name='p0']"
+ name="name">InterfaceDefinition</attr>
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoRpcSetDefaultInterface']/parameter[@name='p1']"
+name="name">Session</attr>
+  
+  
+  <!--static RpcResult	nabtoRpcSetInterface(java.lang.String host, java.lang.String interfaceDefinition, Session session)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoRpcSetInterface']/parameter[@name='p0']"
+ name="name">Host</attr>
+  
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoRpcSetInterface']/parameter[@name='p1']"
+ name="name">InterfaceDefinition</attr>
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoRpcSetInterface']/parameter[@name='p2']"
+name="name">Session</attr>
+  
+  
+  <!--static NabtoStatus	nabtoSetOption(java.lang.String name, java.lang.String value)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoSetOption']/parameter[@name='p0']"
+ name="name">Name</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoSetOption']/parameter[@name='p1']"
+ name="name">Value</attr>
+
+
+
+  <!--static NabtoStatus	nabtoSetStaticResourceDir(java.lang.String nabtoResDir)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoSetStaticResourceDir']/parameter[@name='p0']"
+ name="name">NabtoResDir</attr>
+
+  <!--static NabtoStatus	nabtoSignup(java.lang.String email, java.lang.String password)-->
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoSignup']/parameter[@name='p0']"
+ name="name">Email</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoSignup']/parameter[@name='p1']"
+ name="name">Password</attr>
+
+  <!--static NabtoStatus	nabtoStartup(java.lang.String nabtoHomeDir)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStartup']/parameter[@name='p0']"
+ name="name">NabtoHomeDir</attr>
+  
+  
+  <!--static NabtoStatus	nabtoStreamClose(Stream stream)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStreamClose']/parameter[@name='p0']"
+ name="name">Stream</attr>
+
+
+  <!--static NabtoConnectionType	nabtoStreamConnectionType(Stream stream)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStreamConnectionType']/parameter[@name='p0']"
+ name="name">Stream</attr>
+  
+  
+  <!--static Stream	nabtoStreamOpen(java.lang.String nabtoHost, Session session)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStreamOpen']/parameter[@name='p0']"
+ name="name">NabtoHost</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStreamOpen']/parameter[@name='p1']"
+ name="name">Session</attr>
+  
+  <!--static StreamReadResult	nabtoStreamRead(Stream stream)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStreamRead']/parameter[@name='p0']"
+ name="name">Stream</attr>
+  
+  <!--static NabtoStatus	nabtoStreamSetOption(int optionName, byte[] option, Stream stream)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStreamSetOption']/parameter[@name='p0']"
+ name="name">OptionName</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStreamSetOption']/parameter[@name='p1']"
+ name="name">Option</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStreamSetOption']/parameter[@name='p2']"
+ name="name">Stream</attr>
+  
+  
+  <!--static NabtoStatus	nabtoStreamWrite(byte[] data, Stream stream)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStreamWrite']/parameter[@name='p0']"
+name="name">Data</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoStreamWrite']/parameter[@name='p1']"
+ name="name">Stream</attr>
+
+
+
+
+  <!--static UrlResult	nabtoSubmitPostData(java.lang.String nabtoUrl, byte[] postData, java.lang.String postMimeType, Session session)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoSubmitPostData']/parameter[@name='p0']"
+name="name">NabtoUrl</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoSubmitPostData']/parameter[@name='p1']"
+ name="name">PostData</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoSubmitPostData']/parameter[@name='p2']"
+ name="name">PostMimeType</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoSubmitPostData']/parameter[@name='p3']"
+ name="name">Session</attr>
+  
+  
+
+  <!--static NabtoStatus	nabtoTunnelClose(Tunnel tunnel)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoTunnelClose']/parameter[@name='p0']"
+name="name">Tunnel</attr>
+
+  <!--static TunnelInfoResult	nabtoTunnelInfo(Tunnel tunnel)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoTunnelInfo']/parameter[@name='p0']"
+name="name">Tunnel</attr>
+  
+  <!--static Tunnel	nabtoTunnelOpenTcp(int localPort, java.lang.String nabtoHost, java.lang.String remoteHost, int remotePort, Session session)-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoTunnelOpenTcp']/parameter[@name='p0']"
+name="name">LocalPort</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoTunnelOpenTcp']/parameter[@name='p1']"
+ name="name">NabtoHost</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoTunnelOpenTcp']/parameter[@name='p2']"
+ name="name">RemoteHost</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoTunnelOpenTcp']/parameter[@name='p3']"
+ name="name">RemotePort</attr>
+ 
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoCApiWrapper']/method[@name='nabtoTunnelOpenTcp']/parameter[@name='p4']"
+ name="name">Session</attr>
+
+  <!--Constructor and Description
+  NabtoClient(android.content.Context context)
+  Create a new Nabto client.-->
+
+  <!-- Change a parameter name from the generic p0 to a more meaningful one. -->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/constructor[@name='NabtoClient']/parameter[@name='p0']"
+           name="name">Context</attr>
+
+  <!--UrlResult	fetchUrl(java.lang.String nabtoUrl)-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='fetchUrl']/parameter[@name='p0']"
+name="name">NabtoUrl</attr>
+
+  <!--NabtoStatus	resetAccountPassword(java.lang.String email)
+  Requests reset of account password on the portal (host name defined in the configuration file).-->
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='resetAccountPassword']/parameter[@name='p0']"
+name="name">Email</attr>
+
+  <!--RpcResult	rpcInvoke(java.lang.String nabtoUrl)
+  Retrieves data synchronously from specified nabto://URL.-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='rpcInvoke']/parameter[@name='p0']"
+name="name">NabtoUrl</attr>
+  
+  
+  <!--RpcResult	rpcSetDefaultInterface(java.lang.String interfaceDefinition)
+  Sets the default RPC interface to use when later invoking rpcInvoke(String)-->.
+
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='rpcSetDefaultInterface']/parameter[@name='p0']"
+name="name">InterfaceDefinition</attr>
+  
+  
+  <!--pcResult	rpcSetInterface(java.lang.String nabtoHost, java.lang.String interfaceDefinition)
+  Sets the RPC interface to use for a specific host when later invoking rpcInvoke(String).-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='rpcSetInterface']/parameter[@name='p0']"
+name="name">NabtoHost</attr>
+  
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='rpcSetInterface']/parameter[@name='p1']"
+name="name">InterfaceDefinition</attr>
+  
+  
+  
+  <!--NabtoStatus	signup(java.lang.String email, java.lang.String password)
+  Signs up for a Nabto account on the portal (host name defined in the configuration file).-->
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='signup']/parameter[@name='p0']"
+name="name">Email</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='signup']/parameter[@name='p1']"
+name="name">Password</attr>
+  
+  
+  
+  
+  <!--UrlResult	submitPostData(java.lang.String nabtoUrl, byte[] postData, java.lang.String postMimeType)
+  Submits specified data synchronously to specified URL.-->
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='submitPostData']/parameter[@name='p0']"
+name="name">NabtoUrl</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='submitPostData']/parameter[@name='p1']"
+name="name">PostData</attr>
+
+  <attr path="/api/package[@name='com.nabto.api']/class[@name='NabtoClient']/method[@name='submitPostData']/parameter[@name='p2']"
+name="name">PostMimeType</attr>
+
+
+
+
+</metadata>

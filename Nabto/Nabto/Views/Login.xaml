@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Nabto.Views.Login"
+             Title="Nabto">
+
+  
+  <StackLayout VerticalOptions="StartAndExpand" Padding="5">
+    
+   <Label Text="Log In"  FontSize="20"/>
+  </StackLayout>
+  <StackLayout VerticalOptions="StartAndExpand" Spacing="20"  Padding="20">
+    <Entry x:Name="txtEmail" Text="{Binding Message}"/>
+    <Entry x:Name="txtPassword" IsPassword="True" Text="{Binding Message}"/>
+   <!--<StackLayout VerticalOptions="EndAndExpand" Padding="5">
+     <Label Text="Auto Login" />
+      <Switch x:Name="chkLAutoLogin" />
+    
+    </StackLayout>-->
+    
+   <StackLayout VerticalOptions="StartAndExpand" >
+    <Button Text="Login" Clicked="LoginClicked" />
+
+  </StackLayout>
+  
+  </StackLayout>
+</ContentPage>
