@@ -139,7 +139,7 @@ namespace Nabto.Android.Wrapper
             return GetStatus(result.Status);
             
         }
-        public NabtoStatus RpcInvoke(string URL, ref byte Json)
+        public NabtoStatus RpcInvoke(string URL, ref  byte Json)
         {
             if (Startup != NabtoStatus.Ok)
             {

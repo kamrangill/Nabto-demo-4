@@ -25,7 +25,7 @@ namespace Nabto.Droid.Helpers
             Client = new NabtoClient();
             Client.StartUp();
 
-          TestAPI_RPInvoke();
+         
         }
         public static NabtoStatus OpenSession(string Email, string Password)
         {
@@ -51,8 +51,6 @@ namespace Nabto.Droid.Helpers
         public static void TestAPI_RPInvoke()
         {
         
-         
-         
             var status = Client.OpenSession("guest","123456");
         
             string XmlData = @"<unabto_queries><query name='wind_speed.json' id='2'><request></request><response format='json'><parameter name='rpc_speed_m_s' type='uint32'/></response></query></unabto_queries>";

@@ -71,7 +71,7 @@ namespace Nabto.IOS.Wrapper
 
         // -(nabto_status_t)nabtoStartup;
         [Export("nabtoStartup")]
-        nabto_status_t Startup();
+        nabto_status_t Startup { get; }
 
         // -(nabto_status_t)nabtoShutdown;
         [Export("nabtoShutdown")]

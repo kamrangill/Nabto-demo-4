@@ -7,6 +7,7 @@ using Nabto.Models;
 using System.Threading.Tasks;
 using Nabto.IOS.Wrapper;
 using System.Diagnostics;
+using Xamarin.Forms;
 
 [assembly: Xamarin.Forms.Dependency(typeof(NabtoClientService))]
 namespace Nabto.iOS.Services
@@ -28,8 +29,9 @@ namespace Nabto.iOS.Services
 
         public string GetRpcInvoke(string XMLData, string URL)
         {
-         var Status=  Task.Factory.StartNew(() => NabtoManager.CallQuery(URL,XMLData));
-
+           
+                var Status = Task.Factory.StartNew(() => NabtoManager.CallQuery(URL, XMLData));
+            
             return Status.Result.ToString();
         }
 
