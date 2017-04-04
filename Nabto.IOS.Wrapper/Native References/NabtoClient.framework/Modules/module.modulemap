@@ -1,0 +1,6 @@
+framework module NabtoClient {
+  umbrella header "NabtoClient.h"
+
+  export *
+  module * { export * }
+}
