@@ -118,8 +118,7 @@ namespace Nabto.iOS.Services
 
         public static void TestAPI_RPInvoke()
         {
-          //  NabtoClient api = new NabtoClient();
-
+         
             
 
             Debug.WriteLine("Client Status=" + isApiInitialized);
