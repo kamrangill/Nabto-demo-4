@@ -45,20 +45,7 @@ namespace Nabto.Droid.Services
             return Status.Result.ToString();
         }
 
-        public string GetTunnelState()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string OpenTCPTunnel(string remoteHost, int remotePort)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string ShutDownTunnel()
-        {
-            throw new NotImplementedException();
-        }
+       
 
      
     }

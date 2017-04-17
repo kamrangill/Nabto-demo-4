@@ -24,6 +24,7 @@ namespace Nabto
             
                 var client = DependencyService.Get<INabtoClientService>();
                 client.StartUp();
+
      
         }
 

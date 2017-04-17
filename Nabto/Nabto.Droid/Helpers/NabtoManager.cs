@@ -41,23 +41,13 @@ namespace Nabto.Droid.Helpers
             byte errorMessage = 0;
            
             var status = Client.RpcSetDefaultInterface(query_XMLData, ref errorMessage);
-            byte json = 0;
+            string json = string.Empty;
 
             status = Client.RpcInvoke(URL, ref json);
 
             return json.ToString();
         }
 
-        public static void TestAPI_RPInvoke()
-        {
-        
-            var status = Client.OpenSession("guest","123456");
-        
-            string XmlData = @"<unabto_queries><query name='wind_speed.json' id='2'><request></request><response format='json'><parameter name='rpc_speed_m_s' type='uint32'/></response></query></unabto_queries>";
-            string URL = "nabto://demo.nabto.net/wind_speed.json?";
-            CallQuery(URL, XmlData);
-        }
-     
        
 
     }

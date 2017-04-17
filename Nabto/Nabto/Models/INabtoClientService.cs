@@ -14,10 +14,6 @@ namespace Nabto.Models
 
         
         string GetRpcInvoke(string XMLData,string URL);
-        string OpenTCPTunnel(string remoteHost, int remotePort);
-
-        string GetTunnelState();
-
-        string ShutDownTunnel();
+      
     }
 }

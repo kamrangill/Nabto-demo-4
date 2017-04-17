@@ -112,8 +112,12 @@ namespace Nabto.IOS.Wrapper
         unsafe nabto_status_t SubmitPostData(string url, string postBuffer, ref byte resultBuffer, ref nuint resultLen, ref byte mimeType);
 
         // -(nabto_status_t)nabtoRpcInvoke:(NSString *)url withResultBuffer:(char **)jsonResponse;
-        [Export("nabtoRpcInvoke:withResultBuffer:")]
-        unsafe nabto_status_t RpcInvoke(string url, ref byte jsonResponse);
+
+        
+         [Export("nabtoRpcInvoke:withResultBuffer:")]
+        unsafe nabto_status_t RpcInvoke(string url, ref IntPtr jsonResponse);
+
+      
 
         // -(nabto_status_t)nabtoRpcSetDefaultInterface:(NSString *)interfaceDefinition withErrorMessage:(char **)errorMessage;
         [Export("nabtoRpcSetDefaultInterface:withErrorMessage:")]

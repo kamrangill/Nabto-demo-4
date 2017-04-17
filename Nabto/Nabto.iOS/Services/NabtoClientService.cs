@@ -17,7 +17,7 @@ namespace Nabto.iOS.Services
         public void StartUp()
         {
             Task.Factory.StartNew(() => NabtoManager.StartNabtoClient());
-           // Task.Factory.StartNew(() => NabtoManager.TestAPI_RPInvoke());
+        
 
         }
         public string CreatSession(string UserName, string Password)
@@ -35,34 +35,6 @@ namespace Nabto.iOS.Services
             return Status.Result.ToString();
         }
 
-        public string GetTunnelState()
-        {
-          var State=  Task.Factory.StartNew(() => NabtoManager.GetTunnelState());
-
-            return State.Result.ToString();
-        }
-
-        public string OpenTCPTunnel(string remoteHost, int remotePort)
-        {
-          var Status=  Task.Factory.StartNew(() => NabtoManager.OpenTCPTunnel(remoteHost, remotePort));
-            //   Debug.WriteLine("Tunnel result=" + Status.Result.ToString());
-            string LocalStatus = string.Empty;
-            if (Status.Result==nabto_status_t.Ok)
-            {
-                LocalStatus = "OK";
-            }
-
-            Debug.WriteLine("Tunnel Status=" + LocalStatus);
-
-            return LocalStatus.ToString();
-        }
-
-        public string ShutDownTunnel()
-        {
-            var Status = Task.Factory.StartNew(() => NabtoManager.CloseTunnel());
-            return Status.Result.ToString();
-
-        }
 
       
     }

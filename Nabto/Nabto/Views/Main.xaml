@@ -6,10 +6,10 @@
   
   
   <StackLayout VerticalOptions="StartAndExpand" Padding="5">
-    <Label  x:Name="txtState"  VerticalOptions="Center" HorizontalOptions="Center" />
+    <Label  x:Name="txtwindSpeed"  Text="Wind Speed : " VerticalOptions="Center"  HorizontalOptions="Center" />
 
   
-    <Button  x:Name="btnGetSpeed_IOS"  Text="Window Speed"  Clicked="WindowSpeed_IOSClicked"/>
+    <Button  x:Name="btnGetSpeed_IOS"  Text="Window Speed"  Clicked="WindowSpeed_Clicked"/>
   
     
   </StackLayout>

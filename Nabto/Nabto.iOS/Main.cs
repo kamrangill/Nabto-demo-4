@@ -14,20 +14,20 @@ namespace Nabto.iOS
         {
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
-         /* NabtoClient client = new NabtoClient();
-            if (client.NabtoStartup==nabto_status_t.Ok)
-            {
-             
-                if (client.NabtoOpenSession("Guest", "123456")==nabto_status_t.Ok)
-                {
-                    //client.NabtoFetchUrl("")
+            /* NabtoClient client = new NabtoClient();
+               if (client.NabtoStartup==nabto_status_t.Ok)
+               {
 
-                }
-            }
-            //   var Status=  client.NabtoStartup();
-            //   CFunctions CF;
-            */
+                   if (client.NabtoOpenSession("Guest", "123456")==nabto_status_t.Ok)
+                   {
+                       //client.NabtoFetchUrl("")
 
+                   }
+               }
+               //   var Status=  client.NabtoStartup();
+               //   CFunctions CF;
+               */
+        
             UIApplication.Main(args, null, "AppDelegate");
         }
     }

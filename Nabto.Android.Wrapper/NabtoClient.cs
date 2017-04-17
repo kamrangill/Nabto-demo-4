@@ -108,13 +108,13 @@ namespace Nabto.Android.Wrapper
             return GetStatus(_session.Status);
         }
 
-        public void CloseSession()
+        public NabtoStatus CloseSession()
         {
             if (Session ==null)
             {
                 throw new Exception(Session.Status.Name());
             }
-            instance.CloseSession(Session);
+          return GetStatus(instance.CloseSession(Session));
 
         }
 
@@ -139,7 +139,7 @@ namespace Nabto.Android.Wrapper
             return GetStatus(result.Status);
             
         }
-        public NabtoStatus RpcInvoke(string URL, ref  byte Json)
+        public NabtoStatus RpcInvoke(string URL, ref  string Json)
         {
             if (Startup != NabtoStatus.Ok)
             {
@@ -154,12 +154,14 @@ namespace Nabto.Android.Wrapper
             if (GetStatus(result.Status)==NabtoStatus.Ok)
             {
                 string Data = Regex.Replace(result.Json, @"\r\n?|\n", "");
-                JSONObject reader = new JSONObject(Data);
-                JSONObject resp = reader.GetJSONObject("response");
-                Json = (byte)Convert.ToInt32(resp.GetString("rpc_speed_m_s"));
+                //  JSONObject reader = new JSONObject(Data);
+                /// JSONObject resp = reader.GetJSONObject("response");
+                //  Json = (byte)Convert.ToInt32(resp.GetString("rpc_speed_m_s"));
+
+                Json = Data;
             }
            
-            
+
             return GetStatus(result.Status);
         }
 
